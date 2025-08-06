@@ -1,0 +1,110 @@
+.work {
+    position: relative;
+    padding-bottom: 100px;
+
+    &-header {
+        position: relative;
+        width: 100%;
+
+        h1 {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 1;
+            color: #fff;
+
+            @include media('<1450px') {
+                font-size: 70px;
+                max-width: 860px;
+            }
+
+            @include media('<1150px') {
+                font-size: 60px;
+                max-width: 660px;
+            }
+
+            @include media('<768px') {
+                font-size: 50px;
+                max-height: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+                text-align: center;
+            }
+
+            @include media('<250px') {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 22px;
+            line-height: 1.4;
+            max-width: 900px;
+            margin-top: 20px;
+            color: #fff;
+
+            @include media('<1150px') {
+                font-size: 20px;
+            }
+
+            @include media('<768px') {
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+
+    &-projects {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 60px;
+        margin-top: 60px;
+
+        @include media('<768px') {
+            grid-template-columns: 1fr;
+        }
+
+        &-i {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 20px;
+                margin-bottom: 15px;
+                transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            }
+
+            h2 {
+                color: #fff;
+                font-size: 18px;
+                padding-left: 15px;
+                transition: .5s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+                strong {
+                    color: rgba(255, 255, 255, 0.5);
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    padding-left: 15px;
+                    font-weight: 300;
+                }
+            }
+
+            &:hover {
+
+                img {
+                    transform: scale(1.05);
+                }
+
+                h2 {
+                    opacity: 0.5;
+                }
+
+            }
+        }
+    }
+}
